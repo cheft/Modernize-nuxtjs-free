@@ -6,13 +6,17 @@ import * as directives from "vuetify/directives";
 import PerfectScrollbar from 'vue3-perfect-scrollbar';
 import VueApexCharts from 'vue3-apexcharts';
 import VueTablerIcons from 'vue-tabler-icons';
+import { VDataTable } from 'vuetify/labs/VDataTable'
 import '@/scss/style.scss';
 import {
   PurpleTheme,
 } from "@/theme/LightTheme";
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
-    components,
+    components: {
+      VDataTable,
+      ...components,
+    },
     directives,
     theme: {
       defaultTheme: "PurpleTheme",

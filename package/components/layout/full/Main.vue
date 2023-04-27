@@ -29,29 +29,37 @@ const sDrawer = ref(true);
                     <!---End Single Item-->
                 </template>
             </v-list>
-            <div class="pa-4">
+            <!-- <div class="pa-4">
                 <LayoutFullVerticalSidebarExtraBox/>
-            </div>
+            </div> -->
         </perfect-scrollbar>
     </div>
 
     </v-navigation-drawer>
     <!------Header-------->
-    <v-app-bar elevation="0" height="70">
+    <v-app-bar elevation="0" floating="true" height="70">
         <div class="d-flex align-center justify-space-between w-100">
             <div>
-                <v-btn class="hidden-lg-and-up ms-md-3 ms-sm-5 ms-3 text-muted" @click="sDrawer = !sDrawer" icon variant="flat"
-                    size="small">
-                    <Menu2Icon size="20" stroke-width="1.5" />
-                </v-btn>
-                <!-- Notification -->
-                <LayoutFullVerticalHeaderNotificationDD/>
+              <!-- hidden-lg-and-up  -->
+              <v-btn class="ms-md-3 ms-sm-5 ms-3 text-muted" @click="sDrawer = !sDrawer" icon variant="flat"
+                  size="small">
+                  <Menu2Icon size="20" stroke-width="1.5" />
+              </v-btn>
+              <!-- Notification -->
+              <!-- <LayoutFullVerticalHeaderNotificationDD/> -->
             </div>
-            <div>
-                <!-- Upgrade button -->
-                <v-btn class="mr-2 bg-primary" href="https://adminmart.com/templates/nuxtjs/" target="_blank">Download Free</v-btn>
-                <!-- User Profile -->
+
+            <div class="d-flex">
+              <!-- Upgrade button -->
+              <!-- <v-btn class="mr-2 bg-primary" href="https://adminmart.com/templates/nuxtjs/" target="_blank">Download Free</v-btn> -->
+              <!-- Notification -->
+              <div class="ml-3">
+                <LayoutFullVerticalHeaderNotificationDD/>
+              </div>
+              <!-- User Profile -->
+              <div class="ml-3">
                 <LayoutFullVerticalHeaderProfileDD />
+              </div>
             </div>
         </div>
     </v-app-bar>

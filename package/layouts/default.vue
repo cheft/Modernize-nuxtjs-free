@@ -17,7 +17,8 @@ useHead({
             <LayoutFullMain/>
             <v-main>
                 <v-container fluid class="page-wrapper">
-                    <div class="maxWidth">
+                    <!-- <div class="maxWidth"> -->
+                    <div>
                         <RouterView />
                     </div>
                 </v-container>
