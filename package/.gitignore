@@ -1,4 +1,6 @@
 node_modules
+package/yarn.lock
+package/package-lock.json
 *.log*
 .nuxt
 .nitro
